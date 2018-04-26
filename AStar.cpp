@@ -220,3 +220,22 @@ void AStar::updateGrid(vector<vector<char>>& _grid, const Pos* _cur, const Pos* 
 		_grid[row][col] = 'o';
 	}
 }
+
+/* 
+Please pay attention that indices of a point in a graph and indices of a vertex
+in a grid are different. For a point, i.e., a variable of Pos, the indices of it 
+are x and y in a Cartesian coordinate system with the origin located at the bottom-left
+corner of the graph.
+
+A Grid is stored in a two-dimensional array of C++ and thus a vertex is accessed by 
+its row and column in the grid with the origin located at the top-left corner of the grid.
+
+The ranges of x, y and row, column are also different. For a grid with m rows and n columns,
+row is from 0 to m-1 and column is from 0 to n-1 whereas x is from 1 to n with y from 1 to m.
+
+In a word, for a point in the grid with its coordinates x and y, the corresponding vertex 
+in the grid is accessed by x-1 and m-y. As a user, such transformations never bother you cause 
+the only type of data you can enter and read is Pos. It is defined in a cartesian coordinate system 
+and thus straightforward for you to understand. I wrote this down in case you would read this cpp 
+and want to find out what I have done in this program.
+*/

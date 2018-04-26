@@ -90,3 +90,8 @@ private:
 	static void updateGrid(vector<vector<char>>& _grid, const Pos* _cur, const Pos* _neighbors);
 };
 #endif // !AStar_H
+
+/*
+For a grid with m rows and n colums, the indices of a point, i.e., a variable of data type Pos, 
+are from 1 to n and from 1 to m resectively.
+*/
